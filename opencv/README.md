@@ -55,10 +55,86 @@ This project demonstrates practical implementation of gesture-driven Human-Compu
 
 ---
 
-## Installation
+Problems Faced During Development
 
-### 1. Clone the Repository
-```bash
-git clone https://github.com/your-username/air-drawing.git
-cd air-drawing
-```
+Inconsistent Gesture Detection
+
+Finger detection sometimes failed under different lighting conditions.
+
+Rapid hand movement caused unstable landmark tracking.
+
+False Mode Switching
+
+Slight finger bends were misclassified as different gestures.
+
+Lack of palm orientation filtering caused incorrect activation.
+
+Drawing Jitter
+
+Small fluctuations in fingertip position created shaky lines.
+
+No smoothing mechanism was initially implemented.
+
+Performance Constraints
+
+Higher resolution frames reduced FPS.
+
+Real-time processing required optimization.
+
+Limitations
+
+Single-hand tracking only
+
+Fixed brush thickness
+
+No palm direction validation
+
+No drawing save/export functionality
+
+Gesture recognition based only on simple landmark comparison
+
+Sensitive to lighting conditions
+
+How These Limitations Can Be Overcome
+
+Improve Gesture Accuracy
+
+Implement palm orientation detection.
+
+Add angle-based finger validation instead of simple coordinate comparison.
+
+Reduce Drawing Jitter
+
+Apply smoothing techniques (e.g., moving average filter).
+
+Implement Kalman filtering for stable fingertip tracking.
+
+Improve Performance
+
+Resize frames before processing.
+
+Optimize drawing logic and reduce unnecessary calculations.
+
+Enhance Functionality
+
+Add multi-hand support.
+
+Add dynamic brush thickness control.
+
+Implement save/export feature.
+
+Integrate UI-based color palette.
+
+Learning Outcomes
+
+This project strengthens understanding of:
+
+Real-time computer vision pipelines
+
+Landmark-based gesture detection
+
+Bitwise image compositing
+
+Performance optimization in live systems
+
+Designing gesture-driven user interfaces
